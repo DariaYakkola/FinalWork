@@ -16,6 +16,7 @@ for (int j = 0; j < size; j++)
   }
 }
 int count = -1;
+int errorArray = 0;
 for (int i = 0; i < size; i++)
 {
   count++;
@@ -28,10 +29,16 @@ for (int i = 0; i < size; i++)
     }
     count = -1;
     Console.Write(";");
+    errorArray++;
   }
   else if (array[i] == ';' && count > 3)
   {
     count = -1;
   }
 }
+if (errorArray == 0)
+{
+  Console.Write("Соответсвующих элементов в массиве нет!");
 }
+}
+PrintArray3Chars(message.ToCharArray());
